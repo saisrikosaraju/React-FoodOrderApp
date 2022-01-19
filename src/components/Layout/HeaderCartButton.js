@@ -15,6 +15,7 @@ const HeaderCartButton = (props)=>{
         return curNum + item.amount; 
     },0)
     
+    //conditionally appliying the styles 
     const btnStyles = `${styles.button} ${btnIsHighlighted ? styles.bump: ""}`
     useEffect(()=>{
         if(items.length === 0){
