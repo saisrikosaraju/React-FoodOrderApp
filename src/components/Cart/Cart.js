@@ -41,6 +41,8 @@ const Cart =(props)=>{
         cartCtx.clearCart();
     }
     
+    //output the cart items using cartctx
+    
     const cartItems = (<ul className={styles["cart-items"]}>{cartCtx.items.map(
         (item)=>(<CartItem
              key={item.id} 
