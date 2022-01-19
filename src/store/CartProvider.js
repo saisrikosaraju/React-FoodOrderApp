@@ -6,6 +6,7 @@ const defaultCartState = {
     totalAmount:0
 }
 
+//reducer function checks for the type of action to be dispatched updates that items 
 const cartReducer = (state,action)=>{
     if(action.type === "ADD"){
       const updatedTotalAmount =state.totalAmount+ action.item.price *action.item.amount;
