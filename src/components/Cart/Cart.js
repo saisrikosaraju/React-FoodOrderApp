@@ -15,10 +15,11 @@ const Cart =(props)=>{
     const totalAmount = `${cartCtx.totalAmount.toFixed(2)}SEK`;
     const hasItems = cartCtx.items.length > 0;
 
+    //add more items to cart(+button)
     const cartItemAddHandler = (item)=>{
         cartCtx.addItem({...item,amount:1});
     };
-
+   //remove items from cart(-button)
     const cartItemRemoveHandler = (id)=>{
         cartCtx.removeItem(id);
     };
