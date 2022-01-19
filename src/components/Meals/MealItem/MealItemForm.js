@@ -6,6 +6,7 @@ const MealItemForm = (props)=>{
     const [amountIsValid,setAmountIsValid] = useState(true);
     const amountInputRef = useRef();
 
+    //we can access the input value entered by user using ref
     const submitHandler =(event)=>{
         event.preventDefault();
         const enteredAmount = amountInputRef.current.value;
