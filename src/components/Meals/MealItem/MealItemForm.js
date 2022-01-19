@@ -10,8 +10,10 @@ const MealItemForm = (props)=>{
     const submitHandler =(event)=>{
         event.preventDefault();
         const enteredAmount = amountInputRef.current.value;
-        const enteredAmountNumber = +enteredAmount;
+        const enteredAmountNumber = +enteredAmount; //converting amount to number
 
+        
+        //validate the entered amount by checking min max values
         if(enteredAmount.trim().length === 0 || 
         enteredAmountNumber < 1 ||
         enteredAmountNumber > 5){
