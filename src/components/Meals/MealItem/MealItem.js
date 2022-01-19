@@ -7,6 +7,9 @@ const MealItem =(props)=>{
     const cartCtx = useContext(CartContext);
 
     const price = `${props.price.toFixed(2)}SEK`;
+    
+    //function from mealform.js
+    //it uses the cart context and pass the item to the additem() defined in context provider to add it to cart
 
     const addToCartHandler = (amount)=>{
         cartCtx.addItem({
