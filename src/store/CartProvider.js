@@ -10,6 +10,8 @@ const defaultCartState = {
 const cartReducer = (state,action)=>{
     if(action.type === "ADD"){
       const updatedTotalAmount =state.totalAmount+ action.item.price *action.item.amount;
+        
+        // checking whether the item to be added is already in the cart or not
       
       const existingCartItemIndex = state.items.findIndex(
           (item)=>item.id === action.item.id);
@@ -17,6 +19,7 @@ const cartReducer = (state,action)=>{
       const existingCartItem = state.items[existingCartItemIndex];
       let updatedItems;
 
+        //if the item already exists we simply update the price without changing anything else. now the olde item will be overrided with updated amount item
       if(existingCartItem){
           const updatedItem = {
               ...existingCartItem,
